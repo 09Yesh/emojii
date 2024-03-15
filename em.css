@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+}
+
+.face {
+    height: 250px;
+    width: 250px;
+    background: rgb(231, 133, 149);
+    border-radius: 50%;
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 60px;
+}
+
+.leye,
+.reye {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-color: white;
+    border-radius: 50%;
+    animation: blink 5s infinite alternate;
+}
+
+.leye::before,
+.reye::before {
+    content: "";
+    position: absolute;
+    height: 20px; 
+    width: 20px; 
+    background: black;
+    border-radius: 50%;
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.mouth {
+    position: relative;
+    height: 25px;
+    width: 100px;
+    background-color: red;
+    margin: auto;
+    margin-top: 20%;
+    border-radius: 40%;
+    border: 3px solid black;
+}
+
+.mouth::before,
+.mouth::after {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mouth::before {
+    left: 15%; 
+}
+
+.mouth::after {
+    right: 15%; 
+}
+
+.lears,
+.rears {
+    position: absolute;
+    top: 40%; 
+    height: 30px; 
+    width: 50px; 
+    background-color: palevioletred;
+    border-radius: 50%;
+}
+
+.lears {
+    left: 20%; 
+}
+
+.rears {
+    right: 20%; 
+}
+
